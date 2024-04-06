@@ -14,30 +14,37 @@
     background-color: var(--bg-color);
 }
 
-html, body {
+html, body, #main {
     height: 100%;
-    overflow: hidden;
 }
 
-body, header, footer {
+body, header, footer, #main {
     display: flex;
+}
+
+header, footer, #main {
     justify-content: center;
 }
 
-body, #output {
+body {
+    justify-content: space-between;
+}
+
+body, #main, #output {
     flex-direction: column;
 }
 
-body {
-    justify-content: space-evenly;
+#main {
+    align-items: center;
 }
 
-#output, header, footer {
+header, footer, #send {
     width: 100%;
 }
 
 #output {
-    height: 400px;
+    width: 300px;
+    height: 200px;
     overflow: auto;
 }
 
@@ -53,16 +60,10 @@ body {
     text-align: center;
 }
 
-header, footer {
-    position: fixed;
-}
-
-body {
-    align-items: center;
-}
-
 header {
     top: 0;
+
+    border-bottom: var(--border-args);
 }
 
 footer {
@@ -96,22 +97,19 @@ footer {
     padding: 16px;
 }
 
+#formGreeting, #output {
+    margin: 20px 0;
+}
+
 .inputName {
     margin-bottom: 8px;
 }
 
-#send {
-    width: 100%;
-}
-
 #name {
     border: none;
+    border-bottom: var(--border-args);
 
     caret-color: var(--main-color);
-}
-
-header, #name {
-    border-bottom: var(--border-args);
 }
 
 #name:focus {
