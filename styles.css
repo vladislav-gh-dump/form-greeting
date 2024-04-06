@@ -1,0 +1,129 @@
+:root {
+    --main-color: #70faac;
+    --bg-color: black;
+    --border-args: 2px solid var(--main-color);
+}
+
+* {
+    font-family: 'Courier New';
+
+    margin: 0;
+    padding: 0;
+
+    color: var(--main-color);
+    background-color: var(--bg-color);
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body, header, footer {
+    display: flex;
+    justify-content: center;
+}
+
+body, #output {
+    flex-direction: column;
+}
+
+body {
+    justify-content: space-evenly;
+}
+
+#output, header, footer {
+    width: 100%;
+}
+
+#output {
+    height: 400px;
+    overflow: auto;
+}
+
+#output::-webkit-scrollbar {
+    width: 4px;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background-color: #70faac;
+}
+
+#output p {
+    text-align: center;
+}
+
+header, footer {
+    position: fixed;
+}
+
+body {
+    align-items: center;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+
+    border-top: var(--border-args);
+}
+
+.inputName, #name, #send, .info {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#name, #send {
+    padding: 4px;
+}
+
+#formGreeting, #send {
+    border: var(--border-args);
+}
+
+.siteLabel {
+    line-height: 3em;
+}
+
+.info {
+    line-height: 1.5em;
+}
+
+#formGreeting {
+    padding: 16px;
+}
+
+.inputName {
+    margin-bottom: 8px;
+}
+
+#send {
+    width: 100%;
+}
+
+#name {
+    border: none;
+
+    caret-color: var(--main-color);
+}
+
+header, #name {
+    border-bottom: var(--border-args);
+}
+
+#name:focus {
+    outline: none;
+}
+
+#send:hover {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+}
+
+#send:active {
+    color: var(--main-color);
+    background-color: var(--bg-color);
+}
